@@ -1,0 +1,40 @@
+<template>
+ <div>
+  <div class="topLine"></div>
+ </div>
+</template>
+
+<script>
+ export default {
+   name: '',
+   props: {
+   },
+   components: {
+
+   },
+   data () {
+     return {
+
+     }
+   },
+   methods: {
+
+   },
+   mounted() {
+
+   },
+   watch: {
+
+   },
+   computed: {
+
+   }
+ }
+</script>
+
+<style scoped lang='scss'>
+.topLine{
+    height: 300px;
+    background: red;
+}
+</style>
