@@ -87,7 +87,7 @@
 
         <div class="mapBox m-l5">
             <baidu-map :center="center" :zoom="zoom" @ready="handler" style="height:500px" :scroll-wheel-zoom='true'>
-      </baidu-map>
+         </baidu-map>
         </div>
       </div>
       <div>

@@ -86,15 +86,19 @@
         </div>
 
         <div class="mapBox m-l5">
-            <baidu-map :center="center" :zoom="zoom" @ready="handler" style="height:500px" :scroll-wheel-zoom='true'>
-      </baidu-map>
+          <baidu-map
+            :center="center"
+            :zoom="zoom"
+            @ready="handler"
+            style="height: 500px"
+            :scroll-wheel-zoom="true"
+          >
+          </baidu-map>
         </div>
       </div>
       <div>
         <img src="../../image/home/teamwork.png" class="teamworkImg" alt="" />
       </div>
-     
-     
     </div>
 
     <div class="endMark flex ju-center">
@@ -124,7 +128,7 @@
           </div>
         </div>
         <!-- 联系我们 -->
-        <div class="pos-rel contactUs">
+        <div class=" contactUs">
           <div class="endTil">联系我们</div>
           <div class="flex al-center pos-rel">
             <img
@@ -167,16 +171,13 @@
 </template>
  
 <script>
-
 export default {
   name: "",
   props: {},
-  components: {
-  
-  },
+  components: {},
   data() {
     return {
-       center: {lng: 104.076651, lat: 30.481883},
+      center: { lng: 104.076651, lat: 30.481883 },
       zoom: 13,
       headline: [
         { title: "网站首页", path: "/", heigth: "0" },
@@ -198,20 +199,20 @@ export default {
       col: "",
       shad: "",
       flag: false,
-       screenWidth: '',
-        screenHeight: ''
+      screenWidth: "",
+      screenHeight: "",
     };
   },
 
   methods: {
-      handler ({BMap, map}) {
-      var point = new BMap.Point(104.076651, 30.481883)
-      map.centerAndZoom(point, 18)
-      var marker = new BMap.Marker(point) // 创建标注
-       marker.setTitle("锐远电子科技有限公司");
-      map.addOverlay(marker) // 将标注添加到地图中
+    handler({ BMap, map }) {
+      var point = new BMap.Point(104.076651, 30.481883);
+      map.centerAndZoom(point, 18);
+      var marker = new BMap.Marker(point); // 创建标注
+      marker.setTitle("锐远电子科技有限公司");
+      map.addOverlay(marker); // 将标注添加到地图中
     },
-  
+
     mousin(index) {
       if (index == 2) {
         this.flag = true;
@@ -255,12 +256,9 @@ export default {
         (this.col = ""), (this.shad = "");
       }
     },
-
   },
   mounted() {
-   
     window.addEventListener("scroll", this.handleScroll);
-  
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -411,7 +409,6 @@ export default {
   width: 700px;
   height: 450px;
 }
-
 
 .info {
   z-index: 999;
